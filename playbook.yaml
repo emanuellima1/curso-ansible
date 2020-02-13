@@ -1,0 +1,10 @@
+- name: Configuração da VM
+  hosts: vm
+  become: yes
+
+  tasks:
+    - name: Instalação do Apache2
+      apt:
+        update_cache: yes
+        name: apache2
+    
