@@ -3,8 +3,12 @@
   become: yes
 
   tasks:
-    - name: Instalação do Apache2
-      apt:
-        update_cache: yes
-        name: apache2
-    
+    - name: Role Apache
+      include_role:
+          name: geerlingguy.apache
+
+    - name: Inclui a role curso
+      include_role: 
+          name: curso
+
+
